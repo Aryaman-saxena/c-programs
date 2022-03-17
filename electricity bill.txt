@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main() {
+ float unit, total, charge;
+ char name[20];
+ printf("enter name\n");
+ scanf("%s", name);
+ printf("enter units\n");
+ scanf("%f", &unit);
+ charge =0;
+ if (unit>=1 && unit<=200)
+ {
+   charge = 0.8*unit;
+   
+ } 
+ else if (unit>=200 && unit<=300)
+ {
+   charge = 0.8*(200)+0.9*(unit-200);
+ }
+  else if (unit>300)
+ {
+    charge = 0.8*(200)+0.9*(100)+1*(unit-300);
+ }
+  else 
+  {
+    printf("invalid\n");
+  }
+ total =charge+100;
+ if(total>400);
+ {
+    total =total+(total*0.15);
+ }
+  printf("ELECTRICITY BILL\n");
+  printf("---------------\n");
+  printf("name: %s\n",name);
+  printf("unit: %.2f\n",unit);
+  printf("total: %.2f\n",total);
+  }
+  
+  
+ 
+  

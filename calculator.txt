@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+int main() {
+
+  int num1,num2;
+  float result;
+  char op;
+  printf("enter one no.\n ");
+  scanf("%d%d",&num1,&num2); 
+  printf("enter an operation");
+  printf("+.Addition\n");
+  printf("-.Subtraction\n");
+  printf("*.Multiplication\n");
+  printf("/.Division\n");
+  printf("%%.modulus\n");
+  scanf(" %c",&op);
+  if (op =='+')
+  {
+    result = num1 + num2;
+  }
+  else if (op=='-')        
+  {
+    result=num1-num2;
+          
+  }
+  else if (op =='*')
+  {
+    result=num1*num2;
+           
+  }
+  else if (op =='/')
+  {
+    if(num2 == 0)
+    {
+     printf("cannot be divided");   
+     return(-1);  
+    }
+   result=num1/num2;
+  }
+  else if(op =='%')
+  {
+    if(num2==0)
+    {
+     printf("cannot be divided");    
+     return(-1); 
+    }
+    result=num1%num2;
+  }
+  else
+  {
+     printf("invalid");
+     return(-1);
+  }
+ printf("result = %f",result);
+ return(0);
+
+}
+

@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <math.h>
+int main() 
+{
+  float a,b,c,desc,r1,r2,real,imag;
+  printf("enter the coefficients\n");
+  scanf("%f%f%f",&a,&b,&c);
+  desc = b*b-4*a*c;
+  if (a==0)
+  {
+    printf("it is a linear equation\n");
+    return 1;
+  }
+
+   desc = b*b-4*a*c;
+  
+    if (desc==0)
+    {
+      printf("\nroots are real and equal");
+      r1=-b/(2*a);
+      r2=-b/(2*a);
+      printf("\n roots r1 =%f and r2=%f",r1,r2);
+    }
+    else if (desc>0)
+    {
+      printf("\nroots are real and distinct");
+      r1=(-b + sqrt(desc))/(2*a);
+      r2=(-b - sqrt(desc))/(2.0*a);
+      printf("\n roots r1 =%f and r2=%f",r1,r2);
+    }
+    else
+    {
+      printf("\nroots are imaginary");
+      real=(-b/(2*a));
+      imag=(sqrt(-desc))/(2*a);
+      printf("\n roots r1 =%f+i%f\n",real,imag);
+      printf("\n roots r2 =%f-i%f\n",real,imag);
+    }
+   
+  return 0;
+  
+}
